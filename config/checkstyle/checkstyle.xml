@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE module PUBLIC "-//Puppy Crawl//DTD Check Configuration 1.3//EN" "http://www.puppycrawl.com/dtds/configuration_1_3.dtd">
+<module name="Checker">
+
+    <module name="TreeWalker">
+        <module name="MethodLength">
+           <property name="max" value="15"/>
+            <property name="countEmpty" value="false"/>
+        </module>
+        <module name="NestedForDepth"/>
+        <module name="Indentation" />
+        <module name="LeftCurly"/>
+        <!-- Syklomaatiinen koodikompleksisuus kuvaa ohjelman monimutkaisuutta, eli kuinka monta itsenäistä polkua ohjelman suorituksella on (esim if-lauseet lisäävät mahdollisten polkujen määrää) -->
+        <module name="CyclomaticComplexity">
+            <property name="max" value="3"/>
+        </module>
+        <module name="MagicNumber"/>
+    </module>
+    <module name="SuppressionFilter">
+        <property name="file" value="config/checkstyle/mysuppressions.xml" />
+    </module>
+
+</module>
