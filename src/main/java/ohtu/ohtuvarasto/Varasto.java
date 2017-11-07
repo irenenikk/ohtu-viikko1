@@ -18,9 +18,10 @@ public class Varasto {
 
     public Varasto(double tilavuus, double alkuSaldo) { // kuormitetaan
         if (tilavuus < 0.0) {
-            tilavuus = 0.0;
+            tilavuus = 0.0; // => käyttökelvoton varasto
+        } else {
+            this.tilavuus = tilavuus;
         }
-        this.tilavuus = tilavuus;  // => käyttökelvoton varasto
         this.saldo = asetaAlkuSaldo(tilavuus, alkuSaldo);
     }
 
